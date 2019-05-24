@@ -11,6 +11,18 @@ function Header() {
       |{" "}
       <Link style={linkStyle} to="/about">
         About
+      </Link>{" "}
+      |{" "}
+      <Link style={linkStyle} to="/product">
+        Products
+      </Link>{" "}
+      |{" "}
+      <Link style={linkStyle} to="/team">
+        Team
+      </Link>{" "}
+      |{" "}
+      <Link style={linkStyle} to="contact">
+        Contact Us
       </Link>
     </header>
   );

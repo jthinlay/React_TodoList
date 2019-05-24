@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import Todos from "./components/Todos";
 import Header from "./components/layout/header";
+import Footer from "./components/layout/footer";
+import Team from "./components/pages/team";
 import AddTodo from "./components/addTodo";
 import About from "./components/pages/About";
+import product from "./components/pages/product";
+import contact from "./components/pages/contact";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 //import uuid from "uuid";
@@ -31,7 +35,7 @@ class App extends Component {
 
   //Delete Todo
   onDelete = id => {
-    axios.delete("https://jsonplaceholder.typicode.com/todos/${id}").then(res =>
+    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`).then(res =>
       this.setState({
         todos: [...this.state.todos.filter(todo => todo.id !== id)]
       })
@@ -47,6 +51,7 @@ class App extends Component {
       })
       .then(res => this.setState({ todos: [...this.state.todos, res.data] }));
   };
+
   render() {
     return (
       <Router>
@@ -68,8 +73,12 @@ class App extends Component {
               )}
             />
             <Route path="/about" component={About} />
+            <Route path="/product" component={product} />
+            <Route path="/contact" component={contact} />
+            <Route path="/team" component={Team} />
           </div>
         </div>
+        <Footer />
       </Router>
     );
   }

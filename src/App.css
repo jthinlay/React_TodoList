@@ -12,8 +12,14 @@ a {
   text-decoration: none;
 }
 .container {
-  padding: 1 1rem;
+  padding: 12px 20px 12px 20px;
+  padding-bottom: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f4f4f4;
 }
+
 .btn {
   display: inline-block;
   border: none;
@@ -24,4 +30,45 @@ a {
 }
 .btn:hover {
   background: #666;
+}
+
+/* styling contact form */
+
+.styleForm input {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #555(180, 156, 156);
+}
+.styleForm textarea {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #555(180, 156, 156);
+}
+.styleForm button {
+  font: 2em sans-serif;
+  width: 100%;
+  background-color: #4caf50;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* Footer Style */
+.footerStyle {
+  padding: 10px;
+  text-align: center;
+  font: 0.8em sans-serif;
+}
+/* table style */
+.tableclass {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid black;
+}
+.tableclass tr td {
+  padding: 3px;
 }
