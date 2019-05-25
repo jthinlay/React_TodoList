@@ -5,10 +5,11 @@ import Footer from "./components/layout/footer";
 import Team from "./components/pages/team";
 import AddTodo from "./components/addTodo";
 import About from "./components/pages/About";
-import product from "./components/pages/product";
-import contact from "./components/pages/contact";
+import Product from "./components/pages/product";
+import Contact from "./components/pages/contact";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
+import Jt_logo from "./logo";
 //import uuid from "uuid";
 import axios from "axios";
 
@@ -58,6 +59,7 @@ class App extends Component {
         <div className="App">
           <div className="container">
             <Header />
+            <Jt_logo />
             <Route
               exact
               path="/"
@@ -73,8 +75,8 @@ class App extends Component {
               )}
             />
             <Route path="/about" component={About} />
-            <Route path="/product" component={product} />
-            <Route path="/contact" component={contact} />
+            <Route path="/product" component={Product} />
+            <Route path="/contact" component={Contact} />
             <Route path="/team" component={Team} />
           </div>
         </div>
